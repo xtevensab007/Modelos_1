@@ -1,6 +1,9 @@
 # Modelos_1
 
-Integrantes : Steven Alipio Berrio - cc: 1036661504 - Ing. Sistemas
+Integrantes :<br>
+Steven Alipio Berrio - cc: 1036661504 - Ing. Sistemas<br>
+Alexander de Jesus Ramirez Marulanda - cc: 98552564 - Ing. Sistemas
+
 <br>
 <br>
 para nuestra primera entrega se trabajaron dos archivos , el primero se trato de la exploracion de datos y el segundo el tratamiento con dos modelos predictivos 
