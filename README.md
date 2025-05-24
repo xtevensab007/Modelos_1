@@ -24,7 +24,7 @@ train.py: Entrena un modelo RandomForestClassifier usando un CSV de películas, 
 
 predict.py: Carga el modelo y predice la rentabilidad de nuevas películas a partir de un CSV de entrada.<br>
 Estructura del Proyecto <br>
-.
+
 ├── Dockerfile <br>
 ├── train.py <br>
 ├── predict.py  <br>
@@ -41,7 +41,7 @@ docker build -t mi_imagen_entrenamiento<br>
 
 docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python train.py train.csv <br>
 
-<h1>Hacer predicciones </h1><br>
+3. Hacer predicciones<br>
 
 docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python predict.py train.csv <br>
 
