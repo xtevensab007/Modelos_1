@@ -79,23 +79,23 @@ Estructura del Proyecto<br>
 
 
 
- ├── apirest.py # Script principal de la API REST<br>
- ├── train.py # Entrenamiento del modelo<br>
- ├── predict.py # Script standalone para predecir desde CSV<br>
- ├── train.csv # Datos de entrenamiento<br>
- ├── modelo_tmdb.joblib # Modelo entrenado guardado<br>
- ├── requirements.txt # Dependencias del proyecto<br>
- ├── Dockerfile # Construcción del contenedor<br>
- ├── README.md # Documentación (este archivo)<br>
- └── client.py # Script de prueba de la API (opcional)<br>
+ ├── apirest.py     # Script principal de la API REST<br>
+ ├── train.py       # Entrenamiento del modelo<br>
+ ├── predict.py     # Script standalone para predecir desde CSV<br>
+ ├── train.csv      # Datos de entrenamiento<br>
+ ├── modelo_tmdb.joblib     # Modelo entrenado guardado<br>
+ ├── requirements.txt       # Dependencias del proyecto<br>
+ ├── Dockerfile             # Construcción del contenedor<br>
+ ├── README.md              # Documentación (este archivo)<br>
+ └── client.py              # Script de prueba de la API (opcional)<br>
 
 
 
 Para construir la imagen en docker se utilizo <br>
   docker build -t modelo_tercera_entrega .<br>
 
-Para ejecución del contenedor<br>
-  docker run -p 5000:5000 modelo_tercera_entrega<br>
+Para ejecución del contenedor se utilizara:<br>
+  <b>docker run -p 5000:5000 modelo_tercera_entrega<b><br>
 
 
 La API quedará disponible en:<br>
