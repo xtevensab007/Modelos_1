@@ -94,18 +94,28 @@ Estructura del Proyecto<br>
 Para construir la imagen en docker se utilizo <br>
    <b>docker build -t modelo_tercera_entrega . </b><br>
 <br>
+En este punto Docker utiliza el Dockerfile para instalar Python, las dependencias del proyecto y copiar todos los scripts necesarios dentro de la imagen. El resultado es una imagen llamada modelo_tercera_entrega.<br>
+<br>
+<br>
 Para ejecución del contenedor se utilizara:<br>
   <b>docker run -p 5000:5000 modelo_tercera_entrega </b><br>
+<br>
+El contenedor expone el puerto 5000 para que se  pueda acceder a la API REST desde el navegador o herramientas como Postman o curl.
+<br>
 <br>
 
 La API quedará disponible en:<br>
   <b>http://localhost:5000 </b><br>
+
+  Una vez iniciado, la API estará disponible en el puerto 5000:
 
 <br>
 Endpoints Disponibles<br>
   <b>GET /</b><br>
   Mensaje de prueba<br>
   <b>{"message": "API REST activa"}</b><br>
+
+  Devuelve un mensaje simple de verificación de que la API está activa.<br>
 
 <br>
 
@@ -125,14 +135,19 @@ Ejemplo de cuerpo JSON:<br>
 <b> {</b><br>
   <b> "rentable_pred": 1</b><br>
  <b>}</b><br>
+<br>
+ Realiza una predicción de rentabilidad, donde 1 indica rentable y 0 no rentable.<br>
 
 <br>
 Pruebas<br>
-Se puede usar:<br>
+Se puede probar la API REST localmente usando el script client.py<br>
+
  <b>client.py</b><br>
 <br>
 
- <b>python3 client.py</b>br>
+ <b>python3 client.py</b><br>
+
+ Este script hace una solicitud POST a /predict con un ejemplo de entrada para verificar el funcionamiento del modelo.
 
 
 
