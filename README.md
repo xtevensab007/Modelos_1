@@ -92,47 +92,47 @@ Estructura del Proyecto<br>
 
 
 Para construir la imagen en docker se utilizo <br>
-  docker build -t modelo_tercera_entrega .<br>
+  <b>docker build -t modelo_tercera_entrega .<b><br>
 
 Para ejecución del contenedor se utilizara:<br>
   <b>docker run -p 5000:5000 modelo_tercera_entrega<b><br>
 
 
 La API quedará disponible en:<br>
-  http://localhost:5000<br>
+  <b>http://localhost:5000<b><br>
 
 
 Endpoints Disponibles<br>
-  GET /<br>
+  <b>GET /<b><br>
   Mensaje de prueba<br>
-  {"message": "API REST activa"}<br>
+  <b>{"message": "API REST activa"}<b><br>
 
 
 
-GET /train<br>
+<b>GET /train<b><br>
 Ejecuta el entrenamiento del modelo usando train.csv. El modelo se guarda en modelo_tmdb.joblib.<br>
 
 
 
-POST /predict<br>
+<b>POST /predict<b><br>
 Devuelve la predicción (0 = no rentable, 1 = rentable).<br>
 Ejemplo de cuerpo JSON:<br>
- {<br>
-   "budget": 500000,<br>
-   "popularity": 10.5<br>
- }<br>
- Respuesta:<br>
- {<br>
-   "rentable_pred": 1<br>
- }<br>
+ <b>{<b><br>
+  <b> "budget": 500000,<b><br>
+  <b> "popularity": 10.5<b><br>
+ <b>}<b><br>
+ <b>Respuesta:<b><br>
+<b> {<b><br>
+  <b> "rentable_pred": 1<b><br>
+ <b>}<b><br>
 
 
 Pruebas<br>
 Se puede usar:<br>
- client.py<br>
+ <b>client.py<b><br>
 
 
- python3 client.py<br>
+ <b>python3 client.py<b><br>
 
 
 
