@@ -95,11 +95,11 @@ Para construir la imagen en docker se utilizo <br>
   <b> docker build -t modelo_tercera_entrega . <br>
 <br>
 Para ejecución del contenedor se utilizara:<br>
-  <b>docker run -p 5000:5000 modelo_tercera_entrega<b><br>
+  <b>docker run -p 5000:5000 modelo_tercera_entrega<br>
 <br>
 
 La API quedará disponible en:<br>
-  <b>http://localhost:5000<b><br>
+  <b>http://localhost:5000<br>
 
 <br>
 Endpoints Disponibles<br>
