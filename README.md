@@ -55,9 +55,9 @@ CSV de entrada con al menos las columnas: budget, popularity <br>
 
 
 Dependencias gestionadas por requirements.txt: <br>
-pandas <br>
-scikit-learn <br>
-joblib <br>
+ pandas <br>
+ scikit-learn <br>
+ joblib <br>
 
 
 <h1>Fase 3</h1>
@@ -79,7 +79,7 @@ Estructura del Proyecto<br>
 
 
 
-├── apirest.py # Script principal de la API REST<br>
+ ├── apirest.py # Script principal de la API REST<br>
  ├── train.py # Entrenamiento del modelo<br>
  ├── predict.py # Script standalone para predecir desde CSV<br>
  ├── train.csv # Datos de entrenamiento<br>
@@ -92,93 +92,20 @@ Estructura del Proyecto<br>
 
 
 Para construir la imagen en docker se utilizo <br>
-docker build -t modelo_tercera_entrega .<br>
+  docker build -t modelo_tercera_entrega .<br>
 
 Para ejecución del contenedor<br>
-docker run -p 5000:5000 modelo_tercera_entrega<br>
+  docker run -p 5000:5000 modelo_tercera_entrega<br>
 
 
 La API quedará disponible en:<br>
-http://localhost:5000<br>
+  http://localhost:5000<br>
 
 
 Endpoints Disponibles<br>
-GET /<br>
-Mensaje de prueba<br>
-{"message": "API REST activa"}<br>
-
-
-
-GET /train<br>
-Ejecuta el entrenamiento del modelo usando train.csv. El modelo se guarda en <br>modelo_tmdb.joblib.<br>
-
-
-
-POST /predict<br>
-Devuelve la predicción (0 = no rentable, 1 = rentable).<br>
-Ejemplo de cuerpo JSON:<br>
-{<br>
-  "budget": 500000,<br>
-  "popularity": 10.5<br>
-}<br>
-Respuesta:<br>
-{<br>
-  "rentable_pred": 1<br>
-}<br>
-
-
-Pruebas<br>
-Se puede usar:<br>
-client.py<br>
-
-
-python3 client.py<br>
-
-
-# API REST para Predicción de Rentabilidad de Películas<br>
-
-
-Este proyecto implementa una aplicación REST en Flask que permite:<br>
-
-- Entrenar un modelo de predicción con datos de películas (`/train`)<br>
-- Predecir si una película será rentable (`/predict`)<br>
-
-Se utiliza aprendizaje automático (Random Forest) para predecir la rentabilidad basándose en el presupuesto y la popularidad.<br>
-
-Estructura del Proyecto<br>
-
----<br>
-
-
-
-
-├── apirest.py # Script principal de la API REST<br>
- ├── train.py # Entrenamiento del modelo<br>
- ├── predict.py # Script standalone para predecir desde CSV<br>
- ├── train.csv # Datos de entrenamiento<br>
- ├── modelo_tmdb.joblib # Modelo entrenado guardado<br>
- ├── requirements.txt # Dependencias del proyecto<br>
- ├── Dockerfile # Construcción del contenedor<br>
- ├── README.md # Documentación (este archivo)<br>
- └── client.py # Script de prueba de la API (opcional)<br>
-
-
-
-Para construir la imagen en docker se utilizo <br>
-docker build -t modelo_tercera_entrega .<br>
-
-Para ejecución del contenedor<br>
-docker run -p 5000:5000 modelo_tercera_entrega<br>
-
-
-La API quedará disponible en:<br>
-http://localhost:5000<br>
-
-
-Endpoints Disponibles<br>
-GET /<br>
-Mensaje de prueba<br>
-{"message": "API REST activa"}<br>
+  GET /<br>
+  Mensaje de prueba<br>
+  {"message": "API REST activa"}<br>
 
 
 
@@ -190,21 +117,24 @@ Ejecuta el entrenamiento del modelo usando train.csv. El modelo se guarda en mod
 POST /predict<br>
 Devuelve la predicción (0 = no rentable, 1 = rentable).<br>
 Ejemplo de cuerpo JSON:<br>
-{<br>
-  "budget": 500000,<br>
-  "popularity": 10.5<br>
-}<br>
-Respuesta:<br>
-{<br>
-  "rentable_pred": 1<br>
-}<br>
+ {<br>
+   "budget": 500000,<br>
+   "popularity": 10.5<br>
+ }<br>
+ Respuesta:<br>
+ {<br>
+   "rentable_pred": 1<br>
+ }<br>
 
 
 Pruebas<br>
 Se puede usar:<br>
-client.py<br>
+ client.py<br>
 
 
-python3 client.py<br>
+ python3 client.py<br>
+
+
+
 
 
