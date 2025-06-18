@@ -93,26 +93,26 @@ Estructura del Proyecto<br>
 
 Para construir la imagen en docker se utilizo <br>
   <b> docker build -t modelo_tercera_entrega . <b><br>
-
+<br>
 Para ejecución del contenedor se utilizara:<br>
   <b>docker run -p 5000:5000 modelo_tercera_entrega<b><br>
-
+<br>
 
 La API quedará disponible en:<br>
   <b>http://localhost:5000<b><br>
 
-
+<br>
 Endpoints Disponibles<br>
   <b>GET /<b><br>
   Mensaje de prueba<br>
   <b>{"message": "API REST activa"}<b><br>
 
-
+<br>
 
 <b>GET /train<b><br>
 Ejecuta el entrenamiento del modelo usando train.csv. El modelo se guarda en modelo_tmdb.joblib.<br>
 
-
+<br>
 
 <b>POST /predict<b><br>
 Devuelve la predicción (0 = no rentable, 1 = rentable).<br>
@@ -126,11 +126,11 @@ Ejemplo de cuerpo JSON:<br>
   <b> "rentable_pred": 1<b><br>
  <b>}<b><br>
 
-
+<br>
 Pruebas<br>
 Se puede usar:<br>
  <b>client.py<b><br>
-
+<br>
 
  <b>python3 client.py<b><br>
 
